@@ -58,7 +58,7 @@ Received a message on GREETINGS_CHANNEL from Node Alice: Hello Carol!
 ### Requirements
 
 - Java 11 or higher
-- Crolang Broker running (see previous examples for instructions)
+- Crolang Broker running
 
 ### Execution steps
 
