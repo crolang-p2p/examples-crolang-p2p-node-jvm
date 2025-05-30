@@ -1,6 +1,6 @@
 # Example 4: Different ways of establishing P2P connections
 
-> **Note:** This example demonstrates the four main ways a node can establish peer-to-peer (P2P) connections using the `crolang-p2p-node-jvm` library.
+> **Note:** This example demonstrates the usage of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
 
 ## Table of Contents
 

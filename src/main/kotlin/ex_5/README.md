@@ -1,6 +1,6 @@
 # Example 5: Checking if other Nodes are connected to the Broker
 
-> **Note:** This example demonstrates how to check if other nodes are currently connected to the Broker using the `crolang-p2p-node-jvm` library.
+> **Note:** This example demonstrates the usage of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
 
 ## Table of Contents
 

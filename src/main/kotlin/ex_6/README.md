@@ -1,6 +1,6 @@
 # Example 6: Retrieving nodes currently connected to your local node
 
-> **Note:** This example demonstrates how to retrieve nodes currently connected to your local node using the `crolang-p2p-node-jvm` library, either by node ID or by listing all currently connected nodes. 
+> **Note:** This example demonstrates the usage of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
 
 ## Table of Contents
 
