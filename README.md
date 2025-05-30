@@ -9,3 +9,4 @@ TODO
 5. [Checking if other Nodes are connected to the Broker](src/main/kotlin/ex_5/README.md)
 6. [Retrieving nodes currently connected to your local nodes](src/main/kotlin/ex_6/README.md)
 7. [Disconnecting from the Broker](src/main/kotlin/ex_7/README.md)
+8. [Sending messages through WebSocket](src/main/kotlin/ex_8/README.md)
