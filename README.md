@@ -10,3 +10,4 @@ TODO
 6. [Retrieving nodes currently connected to your local nodes](src/main/kotlin/ex_6/README.md)
 7. [Disconnecting from the Broker](src/main/kotlin/ex_7/README.md)
 8. [Sending messages via WebSocket](src/main/kotlin/ex_8/README.md)
+9. [Nodes Allowing Incoming Connections and Initiating New Connections Simultaneously](src/main/kotlin/ex_9/README.md)
