@@ -12,5 +12,5 @@ TODO
 8. [Sending messages via WebSocket](src/main/kotlin/ex_8/README.md)
 9. [Nodes allowing incoming connections and initiating new connections simultaneously](src/main/kotlin/ex_9/README.md)
 10. [Sending large amount of data over P2P](src/main/kotlin/ex_10/README.md)
-11. [Customizing local Node behavior: BrokerConnectionAdditionalParameters](src/main/kotlin/ex_11/README.md)
+11. [Customizing Local Node Behavior with BrokerConnectionAdditionalParameters](src/main/kotlin/ex_11/README.md)
 12. [Authenticating to the Broker](src/main/kotlin/ex_12/README.md)
