@@ -1,16 +1,11 @@
 # examples-kotlin-crolang-p2p-node-jvm
-Repository containing examples on how to use the [CrolangP2P library in a JVM (Kotlin) environment](https://github.com/crolang-p2p/crolang-p2p-node-jvm).
+Repository containing examples on how to use the [CrolangP2P library in a JVM (Kotlin) environment](https://github.com/crolang-p2p/crolang-p2p-node-jvm) for the [CrolangP2P project](https://github.com/crolang-p2p).
 
 ## Table of Contents
-- [The CrolangP2P Project](#the-crolangp2p-project)
 - [Kotlin Examples Introduction](#kotlin-examples-introduction)
 - [Examples Cross-language Interoperability](#examples-cross-language-interoperability)
 - [Kotlin Examples List](#kotlin-examples-list)
 - [Adding the Library to Your Project](#adding-the-library-to-your-project)
-
-## The CrolangP2P Project
-
-[CrolangP2P](https://github.com/crolang-p2p) is a simple, robust, and cross-language framework for establishing peer-to-peer (P2P) connections between clients (Crolang Nodes) in different programming languages. Nodes connect using unique IDs and can exchange data directly via WebRTC, or through a Broker as a relay if direct P2P is not possible. It is also possible for nodes to exchange messages via WebSocket through the Broker. The project focuses on minimal setup, language-agnostic interoperability, support for large data transfers, and easy extensibility.
 
 ## Kotlin Examples Introduction
 This repository contains a collection of practical examples demonstrating how to use the [CrolangP2P](https://github.com/crolang-p2p) library in a JVM (Kotlin) environment. The official Kotlin/JVM implementation is available here: [crolang-p2p-node-jvm](https://github.com/crolang-p2p/crolang-p2p-node-jvm).
@@ -22,7 +17,7 @@ Each example is designed to illustrate a specific use case, ranging from basic n
 ## Examples Cross-language Interoperability
 [CrolangP2P](https://github.com/crolang-p2p) is a cross-language library, available for multiple programming languages. Each implementation has a dedicated repository with the same set of examples, allowing you to mix and match nodes written in different languages. For instance, you can run the Alice node from Example 1 in Kotlin and the Bob node from Example 1 in JavaScript, and they will interoperate seamlessly.
 
-You can find the complete list of example repositories for all supported languages here: [CrolangP2P Examples List](https://github.com/crolang-p2p#crolangp2p-node-usage-examples-list)
+You can find the complete list of example repositories for all supported languages here: [CrolangP2P Examples List](https://github.com/crolang-p2p#usage-examples)
 
 ## Kotlin Examples List
 The examples are organized in numbered folders, each with its own source code and a dedicated README explaining the context and execution instructions.
