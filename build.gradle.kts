@@ -7,10 +7,11 @@ group = "io.github.crolang-p2p"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation("io.github.crolang-p2p:crolang-p2p-node-jvm:0.1.4-alpha")
+    implementation("io.github.crolang-p2p:crolang-p2p-node-jvm:0.1.5-alpha")
     implementation("com.google.code.gson:gson:2.10.1")
 }
 
@@ -60,3 +61,5 @@ registerExampleRunTask("8", "Bob")
 registerExampleRunTask("9", "Alice")
 registerExampleRunTask("9", "Bob")
 registerExampleRunTask("9", "Carol")
+registerExampleRunTask("10", "Alice")
+registerExampleRunTask("10", "Bob")
