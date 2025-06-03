@@ -1,22 +1,11 @@
 # examples-kotlin-crolang-p2p-node-jvm
+Repository containing examples on how to use the [CrolangP2P library in a JVM (Kotlin) environment](https://github.com/crolang-p2p/crolang-p2p-node-jvm).
 
 ## Table of Contents
 - [The CrolangP2P Project](#the-crolangp2p-project)
 - [Kotlin Examples Introduction](#kotlin-examples-introduction)
 - [Examples Cross-language Interoperability](#examples-cross-language-interoperability)
 - [Kotlin Examples List](#kotlin-examples-list)
-    - [Example 1: Communication among Nodes with CrolangP2P](src/main/kotlin/ex_1/README.md)
-    - [Example 2: Connecting to the CrolangP2P Broker](src/main/kotlin/ex_2/README.md)
-    - [Example 3: Enabling/disabling incoming P2P connections](src/main/kotlin/ex_3/README.md)
-    - [Example 4: Different ways of establish P2P connections](src/main/kotlin/ex_4/README.md)
-    - [Example 5: Checking if other Nodes are connected to the Broker](src/main/kotlin/ex_5/README.md)
-    - [Example 6: Retrieving nodes currently connected to your local nodes](src/main/kotlin/ex_6/README.md)
-    - [Example 7: Disconnecting from the Broker](src/main/kotlin/ex_7/README.md)
-    - [Example 8: Sending messages via WebSocket](src/main/kotlin/ex_8/README.md)
-    - [Example 9: Nodes allowing incoming connections and initiating new connections simultaneously](src/main/kotlin/ex_9/README.md)
-    - [Example 10: Sending large amount of data over P2P](src/main/kotlin/ex_10/README.md)
-    - [Example 11: Customizing Local Node Behavior with BrokerConnectionAdditionalParameters](src/main/kotlin/ex_11/README.md)
-    - [Example 12: Authenticating to the Broker](src/main/kotlin/ex_12/README.md)
 - [Adding the Library to Your Project](#adding-the-library-to-your-project)
 
 ## The CrolangP2P Project
