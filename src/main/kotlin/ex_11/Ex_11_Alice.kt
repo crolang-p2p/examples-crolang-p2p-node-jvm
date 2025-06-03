@@ -1,4 +1,4 @@
-package ex_8
+package ex_11
 
 import org.crolangP2P.BrokerConnectionAdditionalParameters
 import org.crolangP2P.BrokerLifecycleCallbacks
@@ -10,7 +10,7 @@ import org.crolangP2P.LoggingOptions
 import java.util.*
 
 fun main() {
-    CrolangP2P.Kotlin.connectToBroker(BROKER_ADDR, ALICE_ID, BrokerConnectionAdditionalParameters(
+    CrolangP2P.Kotlin.connectToBroker(BROKER_ADDR, ALICE_ID, additionalParameters = BrokerConnectionAdditionalParameters(
         logging = LoggingOptions(
             enableBaseLogging = true, //DEFAULT: false
             enableDebugLogging = true //DEFAULT: false
