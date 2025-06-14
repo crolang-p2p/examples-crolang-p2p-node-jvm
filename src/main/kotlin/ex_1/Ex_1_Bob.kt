@@ -15,7 +15,7 @@ fun main(){
 
             CrolangP2P.Kotlin.allowIncomingConnections(IncomingCrolangNodesCallbacks(
                 onConnectionSuccess = { node ->
-                    println("Connected successfully to Node ${node.id}")
+                    println("Connected successfully to Node ${node.id}, platform: ${node.platform}, version: ${node.version}")
                 },
                 onNewMsg = mapOf(
                     "GREETINGS_CHANNEL" to { node, msg ->

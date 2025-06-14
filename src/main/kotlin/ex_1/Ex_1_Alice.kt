@@ -23,7 +23,7 @@ fun main(){
             )).onFailure {
                 println("Error connecting to Node $BOB_ID: $it")
             }.onSuccess {
-                println("Connected to Node ${it.id}")
+                println("Connected to Node ${it.id}, platform: ${it.platform}, version: ${it.version}")
                 it.send("GREETINGS_CHANNEL", "Hello from Node $ALICE_ID")
             }
         }
