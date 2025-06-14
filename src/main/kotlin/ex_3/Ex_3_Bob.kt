@@ -11,12 +11,13 @@ fun main() {
     CrolangP2P.Kotlin.connectToBroker(BROKER_ADDR, BOB_ID)
     println("Connected to Broker at $BROKER_ADDR as $BOB_ID")
 
-    fun isConnectionAttemptAuthorized(id: String): Boolean {
+    fun isConnectionAttemptAuthorized(id: String, platform: String, version: String): Boolean {
+        println("Connection attempt from Node $id, platform: $platform, version: $version")
         return id == ALICE_ID
     }
 
     CrolangP2P.Kotlin.allowIncomingConnections(IncomingCrolangNodesCallbacks(
-        onConnectionAttempt = { id -> isConnectionAttemptAuthorized(id) },
+        onConnectionAttempt = { id, platform, version -> isConnectionAttemptAuthorized(id, platform, version) },
         onConnectionSuccess = { node ->
             println("Connected successfully to Node ${node.id}")
         },
