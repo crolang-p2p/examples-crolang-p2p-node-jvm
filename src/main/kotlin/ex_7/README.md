@@ -1,7 +1,4 @@
 # Example 7: Disconnecting from the Broker
-
-> **Note:** This example demonstrates the usage of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
-
 ## Table of Contents
 
 - [Learning Objectives](#learning-objectives)
@@ -9,34 +6,32 @@
 - [Example Overview](#example-overview)
 - [Expected Output](#expected-output)
 - [Running the example](#running-the-example)
-  - [Requirements](#requirements)
-  - [Execution steps](#execution-steps)
 
 ## Learning Objectives
 
 This example shows how to:
-- Disconnect the local node from the Broker using the dedicated method [`CrolangP2P.Kotlin.disconnectFromBroker()`].
+- Disconnect the local node from the Broker using the dedicated method [`CrolangP2P.kt.disconnectFromBroker()`].
 - Verify that P2P communication between two already connected nodes remains active even after disconnecting from the Broker.
 
 ## Involved Files
 
-- `Ex_7_Alice.kt`: Alice's logic to establish the P2P connection, disconnect from the Broker, and continue communicating with Bob.
-- `Ex_7_Bob.kt`: Bob's logic to receive messages and reply to Alice.
-- `Constants.kt`: Common constants (IDs, broker address).
+- Ex_7_Alice.kt: Alice's logic to establish the P2P connection, disconnect from the Broker, and continue communicating with Bob.
+- Ex_7_Bob.kt: Bob's logic to receive messages and reply to Alice.
+- Constants.kt: Common constants (IDs, broker address).
 
 ## Example Overview
 
 - Alice and Bob both initially connect to the Broker.
 - Alice establishes a direct P2P connection with Bob and sends a message.
-- Alice disconnects from the Broker using the method [`CrolangP2P.Kotlin.disconnectFromBroker()`].
+- Alice disconnects from the Broker using the method [`CrolangP2P.kt.disconnectFromBroker()`].
 - Despite the disconnection from the Broker, Alice and Bob can continue exchanging messages through the already established P2P channel.
 
 ## Expected Output
 
 During execution, you will see output similar to the following (truncated for brevity):
 ```
-Connected to Broker at ws://localhost:8080 as Bob
-Connected to Broker at ws://localhost:8080 as Alice
+Connected to Broker at http://localhost:8080 as Bob
+Connected to Broker at http://localhost:8080 as Alice
 Connected successfully to Node Alice
 Disconnecting from Broker...
 Is local Node connected to the Broker: false
@@ -59,55 +54,27 @@ Disconnected from Node Alice
 This demonstrates that after both nodes disconnect from the Broker, they continue to exchange messages over the P2P channel until the counter threshold is reached and the P2P connection is closed.
 
 ## Running the example
-
 ### Requirements
-
-- Java 11 or higher
-- Crolang Broker running (see previous examples for instructions)
+- **Java 11 or higher**: Make sure the command `java -version` returns at least version 11.
+- **Crolang Broker running**: Start the CrolangP2P Broker using one of the methods defined in the [project's general README](../../../../README.md).
 
 ### Execution steps
+1. [Start Node Bob](#1-start-node-bob)
+2. [Start Node Alice](#2-start-node-alice)
 
-#### 1. Start the CrolangP2P Broker
+---
 
-You can start the Broker using either Docker or Node.js:
+#### 1: Start Node Bob
 
-**A. Using Docker:**
-
-```sh
-docker run --rm --name CrolangP2PBroker -p 8080:8080 crolangp2p/broker
-```
-
-**B. Using Node.js:**
-
-1. Clone the broker repository:
-   ```sh
-   git clone https://github.com/crolang-p2p/crolang-p2p-broker.git
-   cd crolang-p2p-broker
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Build:
-   ```sh
-   npm run build
-   ```
-4. Start the broker:
-   ```sh
-   npm start
-   ```
-
-#### 2. Start Node Bob
-
-From the root of the example project, run:
+In the project root, run:
 
 ```sh
 ./gradlew runEx7Bob
 ```
 
-#### 3. Start Node Alice
+#### 2: Start Node Alice
 
-In another terminal, run:
+In a separate terminal, run:
 
 ```sh
 ./gradlew runEx7Alice

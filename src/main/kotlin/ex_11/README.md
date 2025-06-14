@@ -1,7 +1,4 @@
 # Example 11: Customizing Local Node Behavior with BrokerConnectionAdditionalParameters
-
-> **Note:** This example demonstrates advanced customization of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
-
 ## Table of Contents
 
 - [Learning Objectives](#learning-objectives)
@@ -10,8 +7,6 @@
 - [Parameter Details](#parameter-details)
 - [Expected Output](#expected-output)
 - [Running the Example](#running-the-example)
-  - [Requirements](#requirements)
-  - [Execution Steps](#execution-steps)
 
 ## Learning Objectives
 
@@ -23,33 +18,33 @@ This example shows how to:
 
 ## Involved Files
 
-- `Ex_11_Alice.kt`: Alice connects to the Broker with custom parameters for logging, lifecycle callbacks, and connection settings.
-- `Constants.kt`: Common constants (IDs, broker address).
+- Ex_11_Alice.kt: Alice connects to the Broker with custom parameters for logging, lifecycle callbacks, and connection settings.
+- Constants.kt: Common constants (IDs, broker address).
 
 ## Example Overview
 
 - Alice connects to the Broker using a highly customized set of parameters:
-  - **LoggingOptions**: Enables both base and debug logging for detailed output.
-  - **BrokerLifecycleCallbacks**: Handles events such as involuntary disconnection, reconnection attempts, and successful reconnections, printing informative messages for each.
-  - **CrolangSettings**: Adjusts timeouts for P2P connections and multipart messages, sets reconnection behavior (including max attempts and delay between attempts).
+    - **LoggingOptions**: Enables both base and debug logging for detailed output.
+    - **BrokerLifecycleCallbacks**: Handles events such as involuntary disconnection, reconnection attempts, and successful reconnections, printing informative messages for each.
+    - **CrolangSettings**: Adjusts timeouts for P2P connections and multipart messages, sets reconnection behavior (including max attempts and delay between attempts).
 - This setup demonstrates how to make your node more robust, observable, and responsive to network events, which is especially useful in production or complex distributed environments.
 
 ## Parameter Details
 
 - **LoggingOptions**: Controls the library's logging behavior.
-  - `enableBaseLogging`: Enables lightweight, essential logs (recommended for most use cases).
-  - `enableDebugLogging`: Enables detailed debug logs, which are much more verbose than base logs and useful for troubleshooting or development.
+    - `enableBaseLogging`: Enables lightweight, essential logs (recommended for most use cases).
+    - `enableDebugLogging`: Enables detailed debug logs, which are much more verbose than base logs and useful for troubleshooting or development.
 - **BrokerLifecycleCallbacks**: Manages the local node's connection lifecycle with the broker, especially in case of disconnection and reconnection.
-  - `onInvoluntaryDisconnection`: Called when the node is disconnected from the broker unexpectedly.
-  - `onReconnectionAttempt`: Called before each reconnection attempt (if reconnection is enabled).
-  - `onSuccessfullyReconnected`: Called when the node successfully reconnects to the broker.
-  - These callbacks are triggered only if `CrolangSettings.reconnection` is `true` and `maxReconnectionAttempts` is not empty (otherwise, reconnection is not attempted).
+    - `onInvoluntaryDisconnection`: Called when the node is disconnected from the broker unexpectedly.
+    - `onReconnectionAttempt`: Called before each reconnection attempt (if reconnection is enabled).
+    - `onSuccessfullyReconnected`: Called when the node successfully reconnects to the broker.
+    - These callbacks are triggered only if `CrolangSettings.reconnection` is `true` and `maxReconnectionAttempts` is not empty (otherwise, reconnection is not attempted).
 - **CrolangSettings**: Manages advanced connection and reconnection settings.
-  - `p2pConnectionTimeoutMillis`: How many milliseconds to wait for a P2P connection attempt before timing out.
-  - `multipartP2PMessageTimeoutMillis`: For large messages (see Example 10), which are split into chunks and reassembled, this defines the maximum time (in ms) allowed between receiving chunks before the multipart message is considered timed out.
-  - `reconnection`: Whether the node should attempt to reconnect to the broker after an involuntary disconnection.
-  - `maxReconnectionAttempts`: How many reconnection attempts to make before giving up (`Optional.empty()` means infinite attempts). If, during reconnection, the broker no longer considers the node authenticated (see Example 12), reconnection attempts will be stopped.
-  - `reconnectionAttemptsDeltaMs`: How many milliseconds to wait between reconnection attempts.
+    - `p2pConnectionTimeoutMillis`: How many milliseconds to wait for a P2P connection attempt before timing out.
+    - `multipartP2PMessageTimeoutMillis`: For large messages (see Example 10), which are split into chunks and reassembled, this defines the maximum time (in ms) allowed between receiving chunks before the multipart message is considered timed out.
+    - `reconnection`: Whether the node should attempt to reconnect to the broker after an involuntary disconnection.
+    - `maxReconnectionAttempts`: How many reconnection attempts to make before giving up (`Optional.empty()` means infinite attempts). If, during reconnection, the broker no longer considers the node authenticated (see Example 12), reconnection attempts will be stopped.
+    - `reconnectionAttemptsDeltaMs`: How many milliseconds to wait between reconnection attempts.
 
 ## Expected Output
 
@@ -66,34 +61,20 @@ Failed to connect to Broker: <error>
 
 The actual output will include detailed logs and lifecycle event messages, reflecting the custom configuration.
 
-## Running the Example
-
+## Running the example
 ### Requirements
+- **Java 11 or higher**: Make sure the command `java -version` returns at least version 11.
+- **Crolang Broker running**: Start the CrolangP2P Broker using one of the methods defined in the [project's general README](../../../../README.md).
 
-- Java 11 or higher
-- Crolang Broker running
+### Execution steps
+1. [Start Node Alice](#1-start-node-alice)
 
-### Execution Steps
+---
 
-1. **Start the CrolangP2P Broker**
+#### 1: Start Node Alice
 
-   You can start the Broker using either Docker or Node.js:
+In the project root, run:
 
-   **A. Using Docker:**
-   ```sh
-   docker run --rm --name CrolangP2PBroker -p 8080:8080 crolangp2p/broker
-   ```
-
-   **B. Using Node.js:**
-   ```sh
-   git clone https://github.com/crolang-p2p/crolang-p2p-broker.git
-   cd crolang-p2p-broker
-   npm install
-   npm run build
-   npm start
-   ```
-
-2. **Start Node Alice**
-   ```sh
-   ./gradlew runEx11Alice
-   ```
+```sh
+./gradlew runEx11Alice
+```

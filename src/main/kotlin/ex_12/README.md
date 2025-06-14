@@ -1,13 +1,10 @@
 # Example 12: Authenticating to the Broker
-
-> **Note:** This example demonstrates advanced customization of the [`crolang-p2p-node-jvm`](https://github.com/crolang-p2p/crolang-p2p-node-jvm) library.
-
 ## Table of Contents
 - [Learning Objectives](#learning-objectives)
 - [Involved Files](#involved-files)
 - [Example Overview](#example-overview)
 - [How Authentication Works](#how-authentication-works)
-- [Running the Example (Docker Compose)](#running-the-example-docker-compose)
+- [Running the Example](#running-the-example)
 - [References](#references)
 
 ## Learning Objectives
@@ -16,9 +13,9 @@
 - See how to run a multi-service CrolangP2P system with authentication using Docker Compose.
 
 ## Involved Files
-- `Ex_12_Alice.kt`: Example node that connects to the broker, sending authentication data.
-- `docker-compose.yml`: Defines and launches both the broker and authentication extension services.
-- [`server.js`](https://github.com/crolang-p2p/examples-crolang-p2p-authentication-extension/blob/main/server.js): The authentication extension server implementation.
+- Ex_12_Alice.kt: Example node that connects to the broker, sending authentication data.
+- docker-compose.yml: Defines and launches both the broker and authentication extension services.
+- [server.js](https://github.com/crolang-p2p/examples-crolang-p2p-authentication-extension/blob/main/server.js): The authentication extension server implementation.
 
 ## Example Overview
 This example shows how to:
@@ -32,9 +29,9 @@ This example shows how to:
 - The node (see `Ex_12_Alice.kt`) sends a JSON string as `onConnectionAttemptData` (e.g., `{ "token": "magic-token", "password": "unicorns" }`).
 - The broker forwards this data to the extension, which parses it and checks credentials.
 - **In this example, the authentication extension api contained in (`server.js`) checks that:**
-  - The node id is exactly `Alice`
-  - The password is exactly `unicorns`
-  - The token is exactly `magic-token`
+    - The node id is exactly `Alice`
+    - The password is exactly `unicorns`
+    - The token is exactly `magic-token`
 - Only if all three checks pass, the node is authenticated and allowed to connect to the Broker.
 - The Node's id is automatically provided by the framework, onConnectionAttempt data can contain additional data (such as token and password in this example)
 - The format and logic of `onConnectionAttemptData` are fully customizable: the extension can implement any logic and data structure you need.
@@ -42,7 +39,7 @@ This example shows how to:
 > **How to setup extensions:**
 > For more details on how to configure and link extensions to the broker, see the [CrolangP2P Broker documentation](https://github.com/crolang-p2p/crolang-p2p-broker). This example assumes the broker is already configured to use the authentication extension via the `NODES_AUTHENTICATION_WEBHOOK_URL` environment variable in the provided `docker-compose.yml`.
 
-## Running the Example (Docker Compose)
+## Running the Example
 
 ### Prerequisites
 - Java 11 or higher
