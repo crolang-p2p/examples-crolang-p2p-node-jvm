@@ -6,7 +6,9 @@ Repository containing examples on how to use the [CrolangP2P library in a JVM (K
 - [Examples Cross-language Interoperability](#examples-cross-language-interoperability)
 - [Kotlin Examples List](#kotlin-examples-list)
 - [Adding the Library to Your Project](#adding-the-library-to-your-project)
-- [Starting the CrolangP2P Broker](#starting-the-crolangp2p-broker)
+- [Running the examples](#running-the-examples)
+  - [Requirements](#requirements)
+  - [Starting the CrolangP2P Broker](#starting-the-crolangp2p-broker)
 
 ## Kotlin Examples Introduction
 This repository contains a collection of practical examples demonstrating how to use the [CrolangP2P](https://github.com/crolang-p2p) library in a JVM (Kotlin) environment. The official Kotlin/JVM implementation is available here: [crolang-p2p-node-jvm](https://github.com/crolang-p2p/crolang-p2p-node-jvm).
@@ -42,7 +44,15 @@ To use the Kotlin/JVM implementation of CrolangP2P in your project, simply add t
 
 Refer to the [library's Maven Central page](https://central.sonatype.com/artifact/io.github.crolang-p2p/crolang-p2p-node-jvm/overview) for the latest version.
 
-## Starting the CrolangP2P Broker
+## Running the examples
+Each example has its own README with instructions on how to run it. However, before running any example, you need to ensure that you satisfy the requirements.
+
+### Requirements
+- **Java 11 or higher**: Make sure the command `java -version` returns at least version 11.  
+  **Note:** If you are using linux on an aarch32 or aarch64 architecture, please do not use java 21, as it is not supported by the JVM implementation used by this library. Use any other version of Java 11+ instead.
+- **Crolang Broker running**: Start the CrolangP2P Broker using one of the following methods.
+
+### Starting the CrolangP2P Broker
 To run the examples, you need to have a [CrolangP2P Broker](https://github.com/crolang-p2p/crolang-p2p-broker) running.
 The Broker is a central component that facilitates the discovery and connection of nodes in the CrolangP2P network.
 
@@ -52,7 +62,7 @@ Run the CrolangP2P Broker, either by:
 
 ---
 
-### Starting the CrolangP2P Broker using Docker
+#### Starting the CrolangP2P Broker using Docker
 
 ```sh
 docker run --rm --name CrolangP2PBroker -p 8080:8080 crolangp2p/broker
@@ -63,7 +73,7 @@ This will start the Broker on port 8080 (which is the default expected by the ex
 
 ---
 
-### Starting the CrolangP2P Broker using NodeJs
+#### Starting the CrolangP2P Broker using NodeJs
 
 1. Clone the [broker repository](https://github.com/crolang-p2p/crolang-p2p-broker):
    ```sh
