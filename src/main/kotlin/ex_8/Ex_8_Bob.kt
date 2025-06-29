@@ -1,6 +1,5 @@
 package org.crolangP2P.ex_8
 
-import org.crolangP2P.Constants.ALICE_ID
 import org.crolangP2P.Constants.BOB_ID
 import org.crolangP2P.Constants.BROKER_ADDR
 import org.crolangP2P.CrolangP2P
