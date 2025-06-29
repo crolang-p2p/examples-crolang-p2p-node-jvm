@@ -1,5 +1,5 @@
-# examples-kotlin-crolang-p2p-node-jvm
-Repository containing examples on how to use the [CrolangP2P library in a JVM (Kotlin) environment](https://github.com/crolang-p2p/crolang-p2p-node-jvm) for the [CrolangP2P project](https://github.com/crolang-p2p).
+# examples-kotlin-crolang-p2p-node
+Repository containing examples on how to use the [CrolangP2P library in a JVM (Kotlin) environment](https://github.com/crolang-p2p/crolang-p2p-node) for the [CrolangP2P project](https://github.com/crolang-p2p).
 
 ## Table of Contents
 - [Kotlin Examples Introduction](#kotlin-examples-introduction)
@@ -11,7 +11,7 @@ Repository containing examples on how to use the [CrolangP2P library in a JVM (K
   - [Starting the CrolangP2P Broker](#starting-the-crolangp2p-broker)
 
 ## Kotlin Examples Introduction
-This repository contains a collection of practical examples demonstrating how to use the [CrolangP2P](https://github.com/crolang-p2p) library in a JVM (Kotlin) environment. The official Kotlin/JVM implementation is available here: [crolang-p2p-node-jvm](https://github.com/crolang-p2p/crolang-p2p-node-jvm).
+This repository contains a collection of practical examples demonstrating how to use the [CrolangP2P](https://github.com/crolang-p2p) library in a JVM (Kotlin) environment. The official Kotlin/JVM implementation is available here: [crolang-p2p-node](https://github.com/crolang-p2p/crolang-p2p-node).
 
 Each example is designed to illustrate a specific use case, ranging from basic node communication to advanced features such as authentication, connection management, and large data transfers.
 
@@ -42,7 +42,7 @@ The examples are organized in numbered folders, each with its own source code an
 
 To use the Kotlin/JVM implementation of CrolangP2P in your project, simply add the dependency to your build configuration. The library is available on Maven Central and can be integrated with Gradle (Kotlin or Groovy DSL) or Maven.
 
-Refer to the [library's Maven Central page](https://central.sonatype.com/artifact/io.github.crolang-p2p/crolang-p2p-node-jvm/overview) for the latest version.
+Refer to the [library's Maven Central page](https://central.sonatype.com/artifact/io.github.crolang-p2p/crolang-p2p-node/overview) for the latest version.
 
 ## Running the examples
 Each example has its own README with instructions on how to run it. However, before running any example, you need to ensure that you satisfy the requirements.

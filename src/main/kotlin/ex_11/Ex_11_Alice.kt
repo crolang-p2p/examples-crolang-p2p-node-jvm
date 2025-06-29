@@ -24,7 +24,7 @@ fun main() {
             p2pConnectionTimeoutMillis = 5000, //DEFAULT: 30000
             multipartP2PMessageTimeoutMillis = 1000, //DEFAULT: 60000
             reconnection = true, //DEFAULT: true
-            maxReconnectionAttempts = Optional.of(5), //DEFAULT: Optional.empty()
+            maxReconnectionAttempts = 5, //DEFAULT: Optional.empty()
             reconnectionAttemptsDeltaMs = 500 //DEFAULT: 2000
         )
     )).onSuccess {
